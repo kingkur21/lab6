@@ -33,7 +33,7 @@ def DP(n, k):
 
         # Inner for-loop to calculate the middle portion of the next row
         for c in range (1,row):
-            pass    # COMPLETE THIS LINE OF CODE
+            nextRow.append(pascalsTriangle[row-1][c-1]+pascalsTriangle[row-1][c])
 
         nextRow.append(1)   # 1 along diagonal
 
@@ -41,7 +41,7 @@ def DP(n, k):
         pascalsTriangle.append(nextRow)
         
     # COMPLETE THE RETURN STATEMENT BY RETURNING THE C(n, k) ITEM REQUESTED
-    return 
+    return pascalsTriangle[n][k]
 
 # PART D - EXTRA CREDIT
 def DP_Extra_Credit(n, k):
@@ -56,7 +56,7 @@ def DP_Extra_Credit(n, k):
         buildList = [1] # 1 in column 0
 
         for c in range (1,row):
-            pass    # COMPLETE THIS LINE OF CODE
+            buildList.append(binoCoeff[c-1]+binoCoeff[c])
 
         buildList.append(1)   # 1 along diagonal
 
@@ -64,9 +64,9 @@ def DP_Extra_Credit(n, k):
         binoCoeff = buildList
         
     # COMPLETE THE RETURN STATEMENT
-    return 
+    return binoCoeff[k]
 
 print('C(28,14) ',C(28,14))
 print('DC(28,14)',DC(28,14))
 print('DP(28,14)',DP(28,14))
-# print('DP_Extra_Credit(28,14)', DP_Extra_Credit(28,14))
+print('DP_Extra_Credit(28,14)', DP_Extra_Credit(28,14))
