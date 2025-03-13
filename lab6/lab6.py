@@ -18,7 +18,7 @@ def DC(n,k):
     if k == 0 or k == n:
         return 1
     else:
-        return DC(n-1,k-1) + C(n-1,k)
+        return DC(n-1,k-1) + DC(n-1,k)
 
 # PART C
 def DP(n, k):
